@@ -15,5 +15,8 @@ class StaticTest extends Specification {
         then:
         staticFoo1.getCount() == staticFoo2.getCount()
         staticFoo1.getCount() == 20
+
+        /* 각 객체 내부의 static 변수만 동일하며, 서로 다른 객체이다. */
+        staticFoo1.toString() != staticFoo2.toString()
     }
 }
