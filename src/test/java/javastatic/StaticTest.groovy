@@ -34,6 +34,8 @@ class StaticTest extends Specification {
         then:
         staticVariable1.getList().get(1) == "b"
         staticVariable1.getList() == staticVariable2.getList()
+
+        /* 해시코드가 메모리 주소를 말하는 것은 아니다. */
         System.identityHashCode(staticVariable1.getList()) == System.identityHashCode(staticVariable2.getList())
     }
 }
