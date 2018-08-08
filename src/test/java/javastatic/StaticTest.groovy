@@ -38,4 +38,18 @@ class StaticTest extends Specification {
         /* 해시코드가 메모리 주소를 말하는 것은 아니다. */
         System.identityHashCode(staticVariable1.getList()) == System.identityHashCode(staticVariable2.getList())
     }
+
+    def "static block"() {
+        given:
+        StaticBlock s1 = new StaticBlock()
+        StaticBlock s2 = new StaticBlock()
+
+        /*
+        1.static init
+        2.instance init
+        3.init
+        2.instance init
+        3.init
+        * */
+    }
 }
